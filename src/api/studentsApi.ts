@@ -1,6 +1,6 @@
 import type GroupInterface from '@/types/GroupInterface';
 
-export const getGroupsApi = async (): Promise<GroupInterface[]> => {
+export const getStudentsApi = async (): Promise<GroupInterface[]> => {
   try {
     const response = await fetch(`${process.env.NEXT_PUBLIC_API}students`);
     const groups = await response.json() as GroupInterface[];

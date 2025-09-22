@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { getGroupsApi } from '@/api/studentsApi';
+import { getStudentsApi } from '@/api/studentsApi';
 import type GroupInterface from '@/types/GroupInterface';
 
 interface GroupsHookInterface {
@@ -11,7 +11,7 @@ const useStudents = (): GroupsHookInterface => {
 
   const { data } = useQuery({
     queryKey: ['groups'],
-    queryFn: () => getGroupsApi(),
+    queryFn: () => getStudentsApi(),
     enabled: false,
   });
 
