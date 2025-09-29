@@ -1,7 +1,7 @@
 'use client';
 
 import useStudents from '@/hooks/useStudents';
-import type GroupInterface from '@/types/GroupInterface';
+import type StudentsInterface from '@/types/StudentsInterface';
 import styles from './Students.module.scss';
 
 const Students = (): React.ReactElement => {
@@ -9,9 +9,9 @@ const Students = (): React.ReactElement => {
 
   return (
     <div className={styles.Students}>
-      {students.map((students: GroupInterface) => (
-        <h2 key={students.id}>
-          {students.name}
+      {students.map((student: StudentsInterface) => (
+        <h2 key={student.id}>
+          {student.first_name}
         </h2>
       ))}
     </div>

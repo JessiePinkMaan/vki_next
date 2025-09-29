@@ -1,10 +1,10 @@
 import sqlite3 from 'sqlite3';
 
-import type GroupInterface from '@/types/GroupInterface';
+import type StudentsInterface from '@/types/StudentsInterface';
 
 sqlite3.verbose();
 
-export const getStudentsDb = async (): Promise<GroupInterface[]> => {
+export const getStudentsDb = async (): Promise<StudentsInterface[]> => {
   const db = new sqlite3.Database(process.env.DB ?? './db/vki-web.db');
 
   const students = await new Promise((resolve, reject) => {
@@ -22,5 +22,5 @@ export const getStudentsDb = async (): Promise<GroupInterface[]> => {
 
   
 
-  return students as GroupInterface[];
+  return students as StudentsInterface[];
 };
