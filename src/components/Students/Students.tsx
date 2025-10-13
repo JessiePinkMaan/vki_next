@@ -7,10 +7,10 @@ import styles from './Students.module.scss';
 import Student from './Student/Student';
 
 const Students = (): React.ReactElement => {
-  const { students } = useStudents();
+  const { students, deleteStudentMutate } = useStudents();
 
 const onDeleteHandler = (id: number) => {
-  const { deleteStudentMutate } = useMutation();
+  deleteStudentMutate(id);
   console.log(id);
   }
 
